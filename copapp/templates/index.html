@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+{% load bootstrap4 %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href ="{% static 'copapp/css/estilos.css' %}">
+    {% bootstrap_css %}
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'chaves' %}">Chaves</a></li>
+            <li><a href="{% url 'contato' %}">Contato</a></li>
+        </ul>
+    </nav>
+    {% bootstrap_messages %}
+    <img src="{% static 'copapp/images/logo4.png' %}" alt="logo" id="image">
+    <h1 id="p">Quando será o primeiro jogo?</h1>
+    <img src="{% static 'copapp/images/fita.png' %}" id="fita" >
+    <div id="pesq">
+        <form action="{% url 'index' %}" method="post" class="form">
+            {% csrf_token %}
+            <div class="form-group"><label for="id_pesq"></label>
+                <input type="text" name="pesq" maxlength="20" class="form-control" placeholder="Nome do time.." title="" required="" id="id_pesq">
+            </div>
+            {% buttons %}
+                <button id="btnBusca" type="submit" class="btn btn-primary">Buscar</button>
+            {% endbuttons %}
+            <div id="texto">
+                {% if resu.time1 == error %}
+                    <p></p>
+                {% else %}
+                    <p id="texto2"> {{resu.time1}} vs {{resu.time2}} </p>
+                    <p id="texto3">Dia {{resu.dia}} de Novembro ás {{resu.horario}}horas</p>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+    <div id="clockdiv">
+        <div>
+            <span class="days" id="day"></span>
+            <div class="smalltext">Days</div>
+        </div>
+        <div>
+            <span class="hours" id="hour"></span>
+            <div class="smalltext">Hours</div>
+        </div>
+        <div>
+            <span class="minutes" id="minute"></span>
+            <div class="smalltext">Minutes</div>
+        </div>
+        <div>
+            <span class="seconds" id="second"></span>
+            <div class="smalltext">Seconds</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static 'copapp/js/javascript.js' %}"></script>
+</body>
+</html>

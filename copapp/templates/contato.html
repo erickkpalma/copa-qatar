@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+{% load bootstrap4 %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+    <link rel="stylesheet" href ="{% static 'copapp/css/estilos.css' %}">
+    {% bootstrap_css %}
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'chaves' %}">Chaves</a></li>
+            <li><a href="{% url 'contato' %}">Contato</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <h1>Contato</h1>
+        <p>Me envie um e-mail:</p>
+        {% bootstrap_messages %}
+        <form action="{% url 'contato' %}" method="post" class="form" autocomplete="off">
+            {% csrf_token %}
+            {% bootstrap_form formulario %}
+            {% buttons %}
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            {% endbuttons %}
+        </form>
+        <div id="whats">
+            <a href="wa.me/5515996621730">Ou se preferir, clique aqui e me chame no Whatsapp</a>
+        </div>
+
+    </main>
+</body>
+</html>

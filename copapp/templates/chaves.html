@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Chaves</title>
+    <link rel="stylesheet" href ="{% static 'copapp/css/estilos.css' %}">
+</head>
+<body id="prin">
+    <nav id="menu">
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'chaves' %}">Chaves</a></li>
+            <li><a href="{% url 'contato' %}">Contato</a></li>
+        </ul>
+    </nav>
+    <main >
+        <img src="{% static 'copapp/images/chaves2.jpg' %}" id="chav">
+    </main>
+</body>
+</html>
