@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#menu {
+    background-color: gray;
+}
+
+ul {
+    max-width: 1200px;
+    list-style: none;
+    padding-left: 100px;
+}
+
+li {
+    display: inline;
+}
+
+#menu ul li a {
+    color: black;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#menu ul li a:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    background-color: brown;
+}
+
+#menu ul li:last-child a {
+    float: right;
+}
+
+#image {
+    margin-left: 594px;
+    margin-top: 100px;
+
+}
+
+ #clockdiv{
+    float: right;
+    font-family: sans-serif;
+    color: rgb(247, 234, 234);
+    display: block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+    margin-top: -350px;
+    margin-right: 18px;
+}
+
+#clockdiv > div{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 3px;
+    background: brown;
+}
+#clockdiv div > span{
+    padding: 15px;
+    border-radius: 3px;
+    background: rgb(95, 13, 13);
+    display: inline-block;
+}
+.smalltext{
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+#pesq {
+    display: flex;
+    justify-content: center;
+    margin-right: 300px;
+}
+
+#txtBusca{
+  float:left;
+  background-color:transparent;
+  padding-left:5px;
+  font-size:18px;
+  border:none;
+  height:32px;
+  width:191px;
+}
+
+#btnBusca{
+  border:none;
+  float:left;
+  height:38px;
+  border-radius:0 7px 7px 0;
+  width:71px;
+  font-weight:bold;
+  background:brown;
+  display: flex;
+  margin-top: -388px;
+  margin-left: 480px;
+  position: absolute;
+}
+
+
+#p {
+    font-size: larger;
+    color: brown;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    margin-right: -10px;
+}
+
+#fita {
+    display: flex;
+    margin-inline-start: -180px;
+}
+
+#whats {
+    display: flex;
+    margin-bottom: 60px;
+    margin-top: 70px;
+}
+
+#whats a {
+    color: green;
+}
+
+#chav {
+    display: flex;
+    margin-left: 125px;
+    margin-bottom: 80px;
+}
+
+#prin {
+    background-color: #851937;
+}
+
+#id_pesq {
+    margin-left: 178px;
+    display: flex;
+    margin-top: -396px;
+}
+
+#texto {
+    margin-left: 250px;
+    position: absolute;
+    margin-top: -277px;
+}
+
+#texto2 {
+    margin-top: -31px;
+    position: absolute;
+    margin-left: 42px;
+}
+
+#texto3 {
+    position: initial;
+    margin-left: 2px;
+    padding: 3px;
+}

@@ -20,8 +20,8 @@ class ContatoForms(forms.Form):
         mail = EmailMessage(
             subject='Email enviado',
             body=conteudo,
-            from_email='ekpalma@gmail.com',
-            to=['ekpalma@gmail.com',],
+            from_email='erick.palma93@outlook.com',
+            to=['erick.palma93@outlook.com',],
             headers={'Reply-To': email}
 
         )
